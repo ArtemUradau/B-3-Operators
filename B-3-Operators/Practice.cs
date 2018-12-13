@@ -13,7 +13,13 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P1_9_NumbersAddition()
         {
-
+            int a, b, c;
+            Console.WriteLine("Введите первое число: ");
+            a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число: ");
+            b = Int32.Parse(Console.ReadLine());
+            c = a + b;
+            Console.WriteLine($"Сумма чисел: {c}");
         }
 
         /// <summary>
@@ -23,7 +29,22 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P2_9_CheckResultAddition()
         {
-
+            int a, b, c1,c2;
+            Console.WriteLine("Введите первое число: ");
+            a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число: ");
+            b = Int32.Parse(Console.ReadLine());
+            c1 = a + b;
+            Console.WriteLine("Введите результат вычисления: ");
+            c2 = Int32.Parse(Console.ReadLine());
+            if(c2==c1)
+            {
+                Console.WriteLine("Правильно");
+            }
+            else
+            {
+                Console.WriteLine("Неправильно");
+            }
         }
 
         /// <summary>
@@ -33,7 +54,30 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P3_9_CheckResultAdditionWithTips()
         {
-
+            int a, b, c1, c2;
+            Console.WriteLine("Введите первое число: ");
+            a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число: ");
+            b = Int32.Parse(Console.ReadLine());
+            c1 = a + b;
+            Console.WriteLine("Введите результат вычисления: ");
+            c2 = Int32.Parse(Console.ReadLine());
+            if (c2 == c1)
+            {
+                Console.WriteLine("Правильно");
+            }
+            else
+            {
+                Console.WriteLine("Неправильно");
+            }
+            if (c2 < c1)
+            {
+                Console.WriteLine("Должно быть больше");
+            }
+            if (c2 > c1)
+            {
+                Console.WriteLine("Должно быть меньше");
+            }
         }
 
         /// <summary>
@@ -42,7 +86,39 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P4_9_CheckResultWithOperator()
         {
-
+            int a, b, c1 = 0, c2, op;
+            Console.WriteLine("Введите первое число: ");
+            a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число: ");
+            b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Выберите оператор(1+/2-)");
+            op = Int32.Parse(Console.ReadLine());
+            if (op == 1)
+            {
+                c1 = a + b;
+            }
+            if (op == 2)
+            {
+                c1 = a - b;
+            }
+            Console.WriteLine("Введите результат вычисления: ");
+            c2 = Int32.Parse(Console.ReadLine());
+            if (c2 == c1)
+            {
+                Console.WriteLine("Правильно");
+            }
+            else
+            {
+                Console.WriteLine("Неправильно");
+            }
+            if (c2 < c1)
+            {
+                Console.WriteLine("Должно быть больше");
+            }
+            if (c2 > c1)
+            {
+                Console.WriteLine("Должно быть меньше");
+            }
         }
 
         /// <summary>
@@ -51,7 +127,43 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P5_9_CheckResultWithAttemps()
         {
-
+            int a, b, c1 = 0, c2, op;
+            Console.WriteLine("Введите первое число: ");
+            a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите второе число: ");
+            b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Выберите оператор(1+/2-)");
+            op = Int32.Parse(Console.ReadLine());
+            if (op == 1)
+            {
+                c1 = a + b;
+            }
+            if (op == 2)
+            {
+                c1 = a - b;
+            }
+            for(int i=0;i<3;i++)
+            {
+                Console.WriteLine("Введите результат вычисления: ");
+                c2 = Int32.Parse(Console.ReadLine());
+                if (c2 == c1)
+                {
+                    Console.WriteLine("Правильно");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Неправильно");
+                }
+                if (c2 < c1)
+                {
+                    Console.WriteLine("Должно быть больше");
+                }
+                if (c2 > c1)
+                {
+                    Console.WriteLine("Должно быть меньше");
+                }
+            }
         }
 
         /// <summary>
@@ -60,7 +172,37 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P6_9_FiveNumbersAddition()
         {
-
+            const int N = 5;
+            int[] num = new int[N];
+            int c2,sum=0;
+            for(int i=0;i<N;i++)
+            {
+                Console.WriteLine($"Введите {i+1} число: ");
+                num[i] = Int32.Parse(Console.ReadLine());
+                sum += num[i];
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Введите результат вычисления: ");
+                c2 = Int32.Parse(Console.ReadLine());
+                if (c2 == sum)
+                {
+                    Console.WriteLine("Правильно");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Неправильно");
+                }
+                if (c2 < sum)
+                {
+                    Console.WriteLine("Должно быть больше");
+                }
+                if (c2 > sum)
+                {
+                    Console.WriteLine("Должно быть меньше");
+                }
+            }
         }
 
         /// <summary>
@@ -69,7 +211,7 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P7_9_NumbersResultWithInfoIfCorrect()
         {
-
+            //Если решение правильное, цикл прерывается, программа завершается(было реализовано ранее)
         }
 
         /// <summary>
@@ -78,12 +220,11 @@ namespace B_3_Operators
         public static void B3_P8_9_CircleArea()
         {
             const double pi = 3.1415926;
-            float rad, sq;
+            double rad, sq;
             Console.WriteLine("Введите радиус круга: ");
-            rad = (float)Convert.ToDouble(Console.ReadLine());
-            sq = rad * rad * (float)pi;
-            Console.WriteLine($"Площадь круга: {sq} ");
-            Console.ReadKey();
+            rad = Double.Parse(Console.ReadLine());
+            sq = rad * rad * pi;
+            Console.WriteLine($"Радиус круга: {sq}");
         }
 
         /// <summary>
@@ -91,7 +232,20 @@ namespace B_3_Operators
         /// </summary>
         public static void B3_P9_9_CreaditCalculator()
         {
-
+            int credit1,percent;
+            double credit2;
+            Console.WriteLine("Введите сумму кредита: ");
+            credit1 = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите проценты кредита: ");
+            percent = Int32.Parse(Console.ReadLine());
+            credit2 = (credit1 / 100) * percent + credit1;
+            double mon = credit2 / 12;
+            Console.WriteLine("Выплаты по месяцам: ");
+            for (int i=1;i<=12;i++)
+            {
+                Console.WriteLine($"{i} месяц- {i*mon} рублей");
+            }
+            Console.WriteLine($"Общая сумма выплат составит: {credit2}");
         }
     }
 }
